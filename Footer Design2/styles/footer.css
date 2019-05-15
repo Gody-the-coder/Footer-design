@@ -1,0 +1,149 @@
+:root{
+    --vertFonce: rgb(4, 167, 104);
+    --vertPale: rgb(33, 224, 151);
+    --blanc: rgb(255, 255, 255);
+    --grisFonce: rgb(35, 37, 37);
+    --grisPale1: rgb(58, 59, 59);
+    --grisPale2: rgb(101, 102, 102);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+html, body{
+    line-height: 1.5;
+}
+
+a{
+    text-decoration: none;
+}
+
+section{
+    padding: 2rem;
+    text-align: justify;
+}
+
+section h1{
+   color: var(--vertFonce);
+   text-align: center;
+   font-size: 3rem;
+}
+
+/* Footer */
+footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+    padding: 2rem;
+    background: var(--grisFonce);
+    color: var(--blanc);
+}
+
+footer > div{
+    padding: 1rem;
+}
+
+footer ul{
+    list-style: none;
+}
+
+/* div 1 */
+
+footer > div:first-child input{
+    padding: 0.5rem;
+    width: 90%;
+    margin: 0.5rem 0;
+    border: none;
+}
+
+footer > div:first-child input:focus{
+    outline: none;
+}
+
+footer > div:first-child input[type='email']{
+    border: 1px solid var(--blanc);
+    color: var(--grisFonce);
+
+}
+
+
+footer > div:first-child input[type='submit']{
+    background: var(--vertFonce);
+    color: var(--blanc);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+footer > div:first-child input[type='submit']:hover{
+    background: var(--blanc);
+    color: var(--vertFonce);
+}
+
+
+/* div 2 */
+footer > div:nth-child(2) ul li{
+    border-bottom: 1px dotted var(--grisPale2);
+    margin: 0.7rem 0;
+}
+
+footer > div:nth-child(2) ul li a{
+    color: var(--blanc);
+    font-weight: bold;
+    transition: all 0.4s ease-in-out;
+}
+
+
+footer > div:nth-child(2) ul li a:hover{
+    color: var(--vertPale);
+}
+
+/* div 3 */
+footer > div:nth-child(3) ul{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+
+footer > div:nth-child(3) ul li a{
+    color: var(--blanc);
+    font-size: 2rem;
+    transition: all 0.4s ease-in-out;
+}
+
+footer > div:nth-child(3) ul li a:hover{
+    font-size: 2.7rem;
+    color: var(--vertPale);
+}
+
+
+/* div 4 */
+footer > div:last-child{
+    grid-column: 1 / span 3;
+    background: var(--grisPale1);
+    text-align: center;
+}
+
+
+@media(max-width: 768px){
+    footer{
+        grid-template-columns: 1fr;
+        padding: 0;
+        grid-gap: 0.5rem;
+    }
+
+    footer > div:first-child{
+        text-align: center;
+    }
+
+
+    footer > div:last-child{
+        grid-column: 1;
+    }
+
+}
